@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell With Us | YourBrand</title>
+  <link rel="stylesheet" href="resell.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <!-- Logo and Reflaunt Name -->
+      <div class="logo">
+        <img src="images/logo.jpg" alt="Reflaunt Logo" class="logo-img">
+        <a href="home.html">Reflaunt</a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="rent.html">Rent</a></li>
+        <li><a href="resell.html">Resell</a></li>
+        <li><a href="restyle.html">Restyle</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Resell Form Section -->
+  <section class="resell-section">
+    <div class="resell-container">
+      <h2>Sell With Us</h2>
+      <p>Fill out the form below to list your item for resale.</p>
+      <form action="submit_resell_form.php" method="POST" enctype="multipart/form-data">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number*</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="category">Category*</label>
+        <select id="category" name="category" required>
+          <option value="">--Select Category--</option>
+          <option value="Lehenga">Lehenga</option>
+          <option value="Saree">Saree</option>
+          <option value="Gown">Gown</option>
+          <option value="Sharara">Sharara</option>
+          <option value="Menswear">Menswear</option>
+          <option value="Accessories">Accessories</option>
+        </select>
+
+        <label for="brand">Brand*</label>
+        <input type="text" id="brand" name="brand" required />
+
+        <label for="condition">Condition*</label>
+        <select id="condition" name="condition" required>
+          <option value="">--Select Condition--</option>
+          <option value="New">New</option>
+          <option value="Like New">Like New</option>
+          <option value="Gently Used">Gently Used</option>
+          <option value="Well Worn">Well Worn</option>
+        </select>
+
+        <label for="original_price">Original Price (INR)*</label>
+        <input type="number" id="original_price" name="original_price" required />
+
+        <label for="expected_price">Expected Selling Price (INR)*</label>
+        <input type="number" id="expected_price" name="expected_price" required />
+
+        <label for="description">Item Description*</label>
+        <textarea id="description" name="description" rows="5" required></textarea>
+
+        <label for="images">Upload Images*</label>
+        <input type="file" id="images" name="images[]" accept="image/*" multiple required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="home.html">Reflaunt</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="rent.html">Rent</a></li>
+        <li><a href="resell.html">Resell</a></li>
+        <li><a href="restyle.html">Restyle</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-text">&copy; 2025 Reflaunt. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

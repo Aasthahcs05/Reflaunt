@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+}
+
+h1, h2, h3, h4, h5, h6, .logo a {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Navbar Styles (Shared) */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav .logo a {
+  color: #1A1A1A;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin-left: 30px;
+}
+
+nav .nav-links li a {
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav .nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+  color: #1A1A1A;
+}
+
+nav .nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Resell Form Section */
+.resell-section {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.resell-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #1A1A1A;
+  text-align: center;
+}
+
+.resell-container p {
+  margin-bottom: 40px;
+  color: #666;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.resell-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.resell-container label {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.resell-container input,
+.resell-container select,
+.resell-container textarea {
+  padding: 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  background-color: #FAFAFA;
+}
+
+.resell-container input:focus,
+.resell-container select:focus,
+.resell-container textarea:focus {
+  border: 1px solid #D4AF37;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.resell-container button {
+  margin-top: 35px;
+  padding: 16px;
+  background-color: #1A1A1A;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resell-container button:hover {
+  background-color: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Footer Styles (Shared) */
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px 30px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-logo a {
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+footer .footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 30px;
+}
+
+footer .footer-links li a {
+  color: #888;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links li a:hover {
+  color: #fff;
+}
+
+footer .footer-text {
+  font-size: 0.85rem;
+  color: #555;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  nav .nav-links {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .nav-links li {
+    margin: 5px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resell-section {
+    margin: 40px 15px;
+    padding: 30px 20px;
+  }
+}
